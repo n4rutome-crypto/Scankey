@@ -1,0 +1,23 @@
+# NutriSnap
+
+Foto makanan lewat kamera, dapatkan perkiraan kalori dan nutrisi.
+
+## Menjalankan di komputer
+1. Pasang Node.js 18+
+2. `npm install`
+3. Ambil API key gratis di https://aistudio.google.com/apikey
+4. Set key:
+   - Mac/Linux: `export GEMINI_API_KEY=your-key`
+   - Windows: `set GEMINI_API_KEY=your-key`
+5. `npm start`, lalu buka http://localhost:3000
+
+## Deploy gratis (Render)
+- Build Command: `npm install`
+- Start Command: `npm start`
+- Environment Variable: `GEMINI_API_KEY` = key kamu
+- Buka link `https://...onrender.com` dari HP/tablet, izinkan kamera
+
+## Catatan
+- API key hanya ada di server, jangan taruh di index.html.
+- Hasil berupa estimasi dari foto, akurasi bergantung sudut foto dan porsi.
+- Jika error "model not found", set variabel `GEMINI_MODEL` ke nama model terbaru.
